@@ -1,38 +1,329 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+  padding-left: 1.5rem;
+}
+
+.header__icon {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100px;
+}
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 15vw;
+  margin-right: 80px;
+}
+
+.header__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 10px;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 999px;
+}
+
+.header__center input {
+  border: none;
+  outline-width: 0;
+  padding: 1rem;
+}
+
+.banner {
+  background: url("https://source.unsplash.com/user/@nickkarvounis/Ciqxn7FE4vE/720*600") center center;
+  height: 50vh;
+  position: relative;
+}
+
+.banner__info {
+  background-color: black;
+  color: white;
+  padding-top: 20vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  width: 300px;
+}
+
+.banner__info button {
+  background-color: #ff7779;
+  color: white;
+  text-transform: inherit;
+  margin-top: 20px;
+  font-weight: 600;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.banner__info button:hover {
+  background-color: white;
+  color: #ff7779;
+}
+
+.banner__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner__searchButton {
+  background-color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  color: #ff7779 !important;
+}
+
+.datepicker {
+  position: absolute;
+  top: 35px;
+  left: 25%;
+  width: 100vw;
+}
+
+.datepicker h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 559px;
+  padding: 10px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 380px;
+}
+
+.datepicker input {
+  width: 539px;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 350px;
+  border: none;
+}
+
+.datepicker input:focus {
+  outline-width: 0;
+}
+
+.card {
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  -webkit-transition: -webkit-transform 100ms ease-in;
+  transition: -webkit-transform 100ms ease-in;
+  transition: transform 100ms ease-in;
+  transition: transform 100ms ease-in, -webkit-transform 100ms ease-in;
+  cursor: pointer;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.card img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  min-width: 300px;
+  min-height: 250px;
+  width: 100%;
+}
+
+.card__info {
+  margin-top: -9px;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 20px;
+  border: 1;
+}
+
+.card__info h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card__info h4 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.footer {
+  border-top: 1px solid lightgray;
+  padding: 20px;
+  background-color: #f7f7f7;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer p {
+  padding: 5px;
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchPage__info {
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchPage__info p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.searchPage__info h1 {
+  margin-bottom: 30px;
+}
+
+.searchPage__info button {
+  border-radius: 30px;
+  text-transform: inherit;
+  margin: 5px;
+}
+
+.searchCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.searchCard:hover {
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchCard img {
+  height: 200px;
+  width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
 }
+
+.searchCard__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 20px;
+}
+
+.searchCard__heart {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.searchCard__infoTop {
+  width: 40vw;
+}
+
+.searchCard__infoTop h3 {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.searchCard__infoTop p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: gray;
+}
+
+.searchCard__infoBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.searchCard__star {
+  color: red;
+}
+
+.searchCard__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchCard__price {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.searchCard__price p {
+  text-align: right;
+}
+/*# sourceMappingURL=App.css.map */

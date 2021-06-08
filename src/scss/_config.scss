@@ -1,0 +1,5 @@
+$primary-color: #ff7779;
+
+@mixin set-transition-ease($seconds: 0.5) {
+  transition: #{$seconds}s ease;
+}
